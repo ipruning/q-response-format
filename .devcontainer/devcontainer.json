@@ -1,11 +1,7 @@
 {
-  "name": "uv",
   "build": {
     "context": "..",
     "dockerfile": "Dockerfile"
-  },
-  "features": {
-    "ghcr.io/dhoeric/features/hadolint:1": {}
   },
   "customizations": {
     "vscode": {
@@ -24,7 +20,10 @@
       }
     }
   },
+  "features": {
+    "ghcr.io/dhoeric/features/hadolint:1": {}
+  },
+  "name": "uv",
   "postCreateCommand": "uv python pin $(cat .python-version) && uv sync --dev",
-  "postStartCommand": "uv run pre-commit install",
   "remoteUser": "vscode"
 }

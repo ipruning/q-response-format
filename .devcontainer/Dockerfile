@@ -6,14 +6,10 @@ SHELL [ "/bin/bash", "-o", "pipefail", "-c" ]
 
 WORKDIR /opt
 
-# The installer requires curl (and certificates) to download the release archive
-# hadolint ignore=DL3008
 RUN apt-get update && \
   apt-get install -y --no-install-recommends ca-certificates curl
 
-# Run uv installer
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
-
 
 FROM mcr.microsoft.com/vscode/devcontainers/base:bookworm
 
