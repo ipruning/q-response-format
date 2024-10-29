@@ -8,7 +8,10 @@
       "extensions": [
         "charliermarsh.ruff",
         "ms-azuretools.vscode-docker",
-        "ms-python.python"
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "catppuccin.catppuccin-vsc"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh",
