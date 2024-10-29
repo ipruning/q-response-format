@@ -14,7 +14,7 @@ RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 FROM mcr.microsoft.com/vscode/devcontainers/base:bookworm
 
 ENV CARGO_HOME="/opt/.cargo"
-ENV PATH="$CARGO_HOME/bin/:$PATH"
+ENV PATH="$CARGO_HOME/bin:$PATH"
 ENV PYTHONUNBUFFERED=True
 ENV UV_LINK_MODE=copy
 

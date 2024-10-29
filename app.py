@@ -1,10 +1,7 @@
-import os
-
 from openai import OpenAI
-from rich import print
 
-API_KEY = os.getenv("DEEPSEEK_API_KEY")
-BASE_URL = "https://api.deepseek.com"
+API_KEY = ""
+BASE_URL = ""
 
 client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
 
