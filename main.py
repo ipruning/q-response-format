@@ -1,12 +1,14 @@
+import os
+
+from dotenv import load_dotenv
 from openai import OpenAI
 
-API_KEY = ""
-BASE_URL = ""
+load_dotenv()
 
-client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
+client = OpenAI(api_key=os.getenv("API_KEY"), base_url=os.getenv("BASE_URL"))
 
 response = client.chat.completions.create(
-    model="deepseek-chat",
+    model="gpt-4o-mini",
     messages=[
         {
             "role": "system",
